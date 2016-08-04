@@ -3,14 +3,7 @@
 --cardinality percentage is less than 60% (excluding the catalog tables which we can't do anything about).
 --75% or higher is an admirable goal. Unique indexes will have a 100% ratio. The higher the ratio, the 
 --less expensive the index will be to maintain on Inserts, Updates, and Deletes, and the more useful the 
---index might be for quickly and efficiently retrieving result sets. Said another way, high quality indexes 
---with a high cardinality percentage can help improve Index Read Efficiency (IREF).
---This is not to say that indexes with a very low cardinality as a percentage of the table's cardinality
---will not be useful, or will not be used by the optimizer as part of the access plan. To my surprise, in 
---one of my test workloads, the optimizer chooses to use an index with a cardinality of < 1% of the table's 
---cardinality. Apparently when you are extremely thirsty even dirty pond water has some appeal, 
---and so it is true with DB2 deciding that a crummy index is better than none. Still, the performance 
---attributes are horrific compared to the results obtained with a better physical design.
+--index might be for quickly and efficiently retrieving result sets. 
  
 
 
